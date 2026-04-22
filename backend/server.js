@@ -12,6 +12,7 @@ const rateLimit = require('express-rate-limit');
 const db = require('./database');
 
 const app = express();
+app.set('trust proxy', 1); // Trust the first proxy (Render)
 const server = http.createServer(app);
 
 const frontendOrigin = process.env.FRONTEND_URL || '*';
