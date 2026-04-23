@@ -13,13 +13,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route 
-          path="/chat" 
+        <Route
+          path="/chat"
           element={
             <PrivateRoute>
               <Chat />
             </PrivateRoute>
-          } 
+          }
         />
         <Route path="*" element={<Navigate to="/chat" />} />
       </Routes>
