@@ -937,7 +937,7 @@ export default function Chat() {
     socket.emit('end_call', { room: currentRoom });
   };
 
-  const logout = () => {
+  const logout = async () => {
     cleanupCall();
     localStorage.removeItem('token');
     localStorage.removeItem('username');
